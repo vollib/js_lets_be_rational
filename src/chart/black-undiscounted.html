@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chart | Undiscounted Black</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="../../build/js_lets_be_rational.js"></script>
+
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+
+        .grid path {
+            stroke-width: 0;
+        }
+
+        .overlay {
+            fill: none;
+            pointer-events: all;
+        }
+
+
+    </style>
+    <script src="../js/chart-black.js"></script>
+    <script src="../js/math.min.js"></script>
+
+</head>
+<body>
+
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-1 sidenav">
+        </div>
+        <div class="col-sm-10 text-left">
+
+            <br>
+            <br>
+            <h3>Undiscounted Black</h3>
+            <br>
+            <br>
+
+            <div class="chart-container">
+            </div>
+
+            <br>
+            <br>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="widget">
+
+                            <h3>x-axis</h3>
+                            <fieldset>
+                                <label for="moneyness">moneyness</label>
+                                <input type="radio" name="radio-xaxis" id="moneyness" checked>
+                                <label for="log-moneyness">log-moneyness</label>
+                                <input type="radio" name="radio-xaxis" id="log-moneyness">
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="input-group input-group-sm">
+                            <label class="input-group-addon">F</label>
+                            <input name="F" placeholder="10 - 1000" value="10" min="10" max="1000" step="1"
+                                   type="number" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div id="F_slider"></div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">t</span>
+                            <input name="t" placeholder="0.0 - 2.0" value="1.0" min="0.0" max="2.0" step="0.1"
+                                   type="number" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div id="t_slider"></div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">σ</span>
+                            <input name="sigma" placeholder="0.05 - 1.00" value="0.30" min="0.05" max="1.00" step="0.01"
+                                   type="number" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div id="sigma_slider"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-1 sidenav">
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid text-center">
+
+</footer>
+
+</body>
+</html>

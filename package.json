@@ -1,0 +1,36 @@
+{
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.8.11",
+    "gulp-coffee": "^2.3.3",
+    "gulp-coffeescript-concat": "^0.1.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-qunit": "^1.5.0",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "qunit": "^0.9.1",
+    "run-sequence": "^1.0.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "name": "js_lets_be_rational",
+  "private": true,
+  "scripts": {
+    "build": "gulp build",
+    "test": "gulp test"
+  },
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.quantycarlo.biz:vollib/js_lets_be_rational.git"
+  },
+  "author": "Gammon Capital LLC.",
+  "license": "MIT",
+  "description": ""
+}

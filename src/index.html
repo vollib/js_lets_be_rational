@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <title>js_lets_be_rational</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<script type="text/javascript" src="../build/js_lets_be_rational.js"></script>
+
+<script>
+
+    var N = 10000000
+
+    var K = 100
+    var t0 = performance.now();
+    for (i__ = i = 0; i < N; i__ = ++i) {
+        K = K+1.0e-12
+        js_lets_be_rational.implied_volatility_from_a_transformed_rational_guess(1.0, 100, K, 0.5, -1);
+    }
+    var t1 = performance.now();
+    var result = (t1 - t0) / 1000;
+    var message = "js_lets_be_rational ran in " + result + "  seconds.";
+
+    console.log(message)
+
+    document.body.innerHTML += "<div>" + message + "</div>"
+
+
+</script>
+
+</body>
+</html>
